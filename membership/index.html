@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become a Member — The Relational School</title>
+<meta name="description" content="Join The Relational School. Weekly group practice, monthly deep dives, and a community devoted to relational aliveness. $250/month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --coral: #E8654A;
+  --coral-deep: #D5543A;
+  --sun: #F2A922;
+  --sage: #7BA687;
+  --sky: #5BA4CF;
+  --plum: #8B5E83;
+  --cream: #FFF8F0;
+  --warm-white: #FFFDFB;
+  --deep: #2D2A26;
+  --deep-soft: #4A4540;
+  --glow: #FFF0D4;
+  --coral-light: #FDEEE9;
+  --sage-light: #EDF5EF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--deep);
+  background: var(--warm-white);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== BACK LINK ===== */
+.back-link {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 100;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--deep-soft);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link:hover { color: var(--coral); }
+
+/* ===== HEADER ===== */
+.page-header {
+  padding: 6rem 0 3rem;
+  text-align: center;
+}
+
+.page-header .school-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 2.6rem;
+  line-height: 1.25;
+  color: var(--deep);
+  margin-bottom: 1.25rem;
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: var(--coral);
+}
+
+.page-header .intro {
+  font-size: 1.05rem;
+  color: var(--deep-soft);
+  line-height: 1.8;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ===== RHYTHM SECTION ===== */
+.rhythm { padding: 2.5rem 0 3rem; }
+
+.rhythm-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 2rem;
+}
+
+.rhythm-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+  align-items: flex-start;
+}
+
+.rhythm-item:first-of-type {
+  border-top: 1px solid rgba(45, 42, 38, 0.08);
+}
+
+.rhythm-day {
+  flex-shrink: 0;
+  width: 90px;
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--deep);
+  padding-top: 0.15rem;
+}
+
+.rhythm-content h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--deep);
+  margin-bottom: 0.35rem;
+}
+
+.rhythm-content p {
+  font-size: 0.92rem;
+  color: var(--deep-soft);
+  line-height: 1.65;
+}
+
+.rhythm-meta {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.rhythm-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  background: var(--sage-light);
+  color: var(--sage);
+}
+
+.rhythm-tag.open {
+  background: var(--glow);
+  color: var(--sun);
+}
+
+/* ===== WHAT CHANGES ===== */
+.what-changes { padding: 2.5rem 0; }
+
+.what-changes-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--plum);
+  margin-bottom: 1.5rem;
+}
+
+.what-changes p {
+  font-size: 1.02rem;
+  color: var(--deep-soft);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.what-changes em {
+  color: var(--deep);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ===== COMMITMENT BOX ===== */
+.commitment {
+  margin: 2.5rem 0 2rem;
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.commitment .price {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--deep);
+  margin-bottom: 0.25rem;
+}
+
+.commitment .price span {
+  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--deep-soft);
+}
+
+.commitment .price-note {
+  font-size: 0.9rem;
+  color: var(--deep-soft);
+  margin-bottom: 2rem;
+}
+
+.btn-join {
+  display: inline-block;
+  background: var(--coral);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 2.4rem;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-join:hover {
+  background: var(--coral-deep);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--deep-soft);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.btn-secondary-link:hover { color: var(--coral); }
+.btn-secondary-link span { text-decoration: underline; }
+
+/* ===== ACCESSIBILITY ===== */
+.accessibility {
+  text-align: center;
+  padding: 0 0 2rem;
+  font-size: 0.88rem;
+  color: var(--deep-soft);
+  font-style: italic;
+}
+
+.accessibility a {
+  color: var(--coral);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ===== FOOTER QUOTE ===== */
+.footer-quote {
+  padding: 3rem 0 4rem;
+  text-align: center;
+  border-top: 1px solid rgba(45, 42, 38, 0.08);
+}
+
+.footer-quote blockquote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--deep-soft);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-quote blockquote em { color: var(--coral); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .page-header { padding: 5rem 0 2rem; }
+  .page-header h1 { font-size: 2rem; }
+  .rhythm-item { flex-direction: column; gap: 0.5rem; }
+  .rhythm-day { width: auto; }
+  .commitment { padding: 2rem 1.5rem; }
+  .commitment .price { font-size: 2rem; }
+}
+
+/* ===== FADE IN ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.fade-in:nth-child(2) { animation-delay: 0.1s; }
+.fade-in:nth-child(3) { animation-delay: 0.2s; }
+.fade-in:nth-child(4) { animation-delay: 0.3s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<a href="/therelationalschool/" class="back-link">← The Relational School</a>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="page-header fade-in">
+    <div class="school-name">The Relational School</div>
+    <h1>You're joining a <em>practice</em>.</h1>
+    <p class="intro">Not a course. Not a program with a start and end date. This is an ongoing community of people practicing together — showing up weekly, building relational capacity, and becoming more alive in the process.</p>
+  </div>
+
+  <!-- THE RHYTHM -->
+  <div class="rhythm fade-in">
+    <div class="rhythm-label">The Weekly Rhythm</div>
+
+    <div class="rhythm-item">
+      <div class="rhythm-day">Mondays</div>
+      <div class="rhythm-content">
+        <h3>The Weekly Ground</h3>
+        <p>Journaling prompts, co-working accountability, and 1:1 check-ins. A grounded start to the week — space to do what matters most, with your inner work front and center.</p>
+        <div class="rhythm-meta">
+          <span class="rhythm-tag">90 min</span>
+          <span class="rhythm-tag open">Main room free for all</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rhythm-item">
+      <div class="rhythm-day">Fridays</div>
+      <div class="rhythm-content">
+        <h3>Pattern Break</h3>
+        <p>The flagship session. Live relational practice where you surface the patterns running your life, break their grip, and ride the freedom somewhere new — together.</p>
+        <div class="rhythm-meta">
+          <span class="rhythm-tag">90 min</span>
+          <span class="rhythm-tag">Included</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rhythm-item">
+      <div class="rhythm-day" style="font-size: 0.92rem;">Last Wed/mo</div>
+      <div class="rhythm-content">
+        <h3>The Crucible</h3>
+        <p>Monthly advanced practice. Full presence, full intensity. The places most people avoid — held with care and without flinching.</p>
+        <div class="rhythm-meta">
+          <span class="rhythm-tag">60 min</span>
+          <span class="rhythm-tag">Monthly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT CHANGES -->
+  <div class="what-changes fade-in">
+    <div class="what-changes-label">What changes with regular practice</div>
+    <p>You start noticing <em>the moment before you react</em> — the half-second where you'd normally freeze, fight, or disappear. And in that half-second, you find something new is possible.</p>
+    <p>You build tolerance for being seen. You stop performing safety and start actually feeling it. You find out what your relationships could be if you weren't running the same loops.</p>
+    <p>This isn't insight work. It's <em>practice</em>. You do it with other people, in real time, and something in your body rewires.</p>
+  </div>
+
+  <!-- COMMITMENT -->
+  <div class="commitment fade-in">
+    <div class="price">$250<span>/month</span></div>
+    <div class="price-note">Cancel anytime. No contracts.</div>
+    <a href="https://buy.stripe.com/cNi28q73c7tF9O6fahejK01" class="btn-join" target="_blank">Join the School</a>
+    <br>
+    <a href="https://calendly.com/sofiajeannec/mapping" class="btn-secondary-link" target="_blank">Rather talk first? <span>Book a free intro call</span></a>
+  </div>
+
+  <!-- ACCESSIBILITY -->
+  <div class="accessibility fade-in">
+    Financial accessibility matters. If cost is a barrier, <a href="https://tally.so/r/Me5pYM" target="_blank">apply for a scholarship</a>.
+  </div>
+
+  <!-- FOOTER QUOTE -->
+  <div class="footer-quote fade-in">
+    <blockquote>We get dysregulated when we think we need to follow certain social rules to be safe. The first step is to break those rules in a <em>low stakes way</em>.</blockquote>
+  </div>
+
+</div>
+
+</body>
+</html>
