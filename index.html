@@ -765,9 +765,73 @@
                 font-size: 1.3rem;
             }
         }
+        /* ===== ANNOUNCEMENT BAR ===== */
+        .announcement-bar {
+            background: var(--deep);
+            color: var(--cream);
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 101;
+        }
+
+        .announcement-bar a {
+            color: var(--sun);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.3s;
+        }
+
+        .announcement-bar a:hover { color: var(--coral); }
+
+        body.has-announcement nav { top: 36px; }
+        body.has-announcement nav.scrolled { top: 0; }
+        body.has-announcement .hero { padding-top: 36px; }
+
+        /* ===== NEWSLETTER CTA ===== */
+        .newsletter-cta {
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .newsletter-cta h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: var(--deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .newsletter-cta p {
+            font-size: 0.95rem;
+            color: var(--deep-soft);
+            margin-bottom: 1.25rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-cta .btn {
+            background: var(--sun);
+            color: var(--deep);
+        }
+
+        .newsletter-cta .btn:hover {
+            background: var(--coral);
+            color: white;
+        }
     </style>
 </head>
-<body>
+<body class="has-announcement">
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+    Retreats &amp; workshops coming soon — <a href="https://tally.so/r/b5OQR6" target="_blank">get updates</a>
+</div>
 
     <!-- NAV -->
     <nav>
@@ -912,6 +976,13 @@
                         <span class="meta-tag">Retreat format</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- NEWSLETTER CTA -->
+            <div class="newsletter-cta reveal">
+                <h3>Stay in the loop</h3>
+                <p>Retreats, workshops, and openings — I'll let you know when something's coming.</p>
+                <a href="https://tally.so/r/b5OQR6" target="_blank" class="btn btn-primary">Get Updates →</a>
             </div>
         </div>
     </section>
@@ -1163,8 +1234,9 @@
             <p class="connect-text">Whether you're drawn to individual work, a group experience, or just want to learn more — the first step is always a conversation.</p>
             <a href="https://calendly.com/sofiajeannec/mapping" class="btn btn-glow" target="_blank">Book a Free Intro Call</a>
             <div class="connect-links">
+                <a href="https://tally.so/r/68RLYY" class="connect-link" target="_blank">Contact ↗</a>
                 <a href="https://sofiajeanne.substack.com/" class="connect-link">Substack ↗</a>
-                <a href="https://www.instagram.com/sofullofsun/" class="connect-link">Instagram ↗</a>
+                <a href="https://www.instagram.com/sofullofsun/" class="connect-link" target="_blank">Instagram ↗</a>
                 <a href="https://www.youtube.com/@sofiajeanne" class="connect-link">YouTube ↗</a>
                 <a href="https://www.patreon.com/sofiajeanne" class="connect-link">Patreon ↗</a>
                 <a href="https://forms.gle/fvLKNTBDKuJJhuUT8" class="connect-link">Newsletter ↗</a>
