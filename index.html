@@ -824,6 +824,43 @@
             background: var(--coral);
             color: white;
         }
+
+        /* ===== TRIAL BADGE ===== */
+        .trial-banner {
+            background: var(--sage-light);
+            border: 1.5px dashed var(--sage);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .trial-banner-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sage);
+            background: var(--warm-white);
+            padding: 0.25rem 0.7rem;
+            border-radius: 50px;
+        }
+
+        .trial-banner-text {
+            font-size: 0.92rem;
+            color: var(--deep);
+            font-weight: 500;
+        }
+
+        .trial-banner-text em {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--sage);
+        }
     </style>
 </head>
 <body class="has-announcement">
@@ -876,12 +913,23 @@
                     <div class="offering-icon">📝</div>
                     <div class="offering-type type-sun">Mondays · 2-3:30pm ET (New York) · Online</div>
                     <div class="offering-name">The Weekly Ground</div>
-                    <p class="offering-desc">Accountability for your holy work, your drudge work, and your inner work — with journaling prompts, co-working energy, and 1:1 time for monthly members. Many things get done simply by setting the time aside, and having a little social accountability. Anyone can join for journaling and co-working in the main room for free.</p>
+                    <p class="offering-desc">Accountability for your holy work, your drudge work, and your inner work — with journaling prompts and co-working energy. Many things get done simply by setting the time aside, and having a little social accountability. Open to everyone; <em>members get 1:1 check-in time</em>.</p>
                     <div class="offering-meta">
-                        <span class="meta-tag">Free access</span>
+                        <span class="meta-tag">Drop-in welcome</span>
                         <span class="meta-tag">1:1 check-ins for members</span>
                     </div>
                     <a href="https://us06web.zoom.us/meeting/register/_8qBbXulTPGqBJ5hUR4p6A" target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.6rem 1.4rem; background: var(--sun); color: var(--deep);">Registration →</a>
+                </div>
+
+                <div class="offering-card card-sage">
+                    <div class="offering-icon">🌿</div>
+                    <div class="offering-type type-sage">Wednesdays · 2-3pm ET (New York) · Online</div>
+                    <div class="offering-name">Secret Sessions</div>
+                    <p class="offering-desc">Solo somatic practice, in the company of others. Movement, nervous system work, somatic meditation, voice — the form follows what's most alive that week. You're with the group and tending to your own body and being. A different doorway than relational practice — less talking, more body. <em>(The last Wednesday of each month is The Crucible — see below.)</em></p>
+                    <div class="offering-meta">
+                        <span class="meta-tag">Included with membership</span>
+                    </div>
+                    <a href="https://calendly.com/sofiajeannec/mapping" target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.6rem 1.4rem; background: var(--sage);">Drop-in Registration →</a>
                 </div>
 
                 <div class="offering-card card-coral">
@@ -923,7 +971,11 @@
                     <ul style="list-style: none; margin-bottom: 1.5rem;">
                         <li style="padding: 0.5rem 0 0.5rem 1.5rem; position: relative; font-size: 0.95rem; color: var(--deep-soft);">
                             <span style="position: absolute; left: 0; color: var(--sun);">✦</span>
-                            <strong>All Pattern Break sessions</strong> — weekly live relational practice
+                            <strong>All Pattern Break sessions</strong> — weekly live relational practice (Fridays)
+                        </li>
+                        <li style="padding: 0.5rem 0 0.5rem 1.5rem; position: relative; font-size: 0.95rem; color: var(--deep-soft);">
+                            <span style="position: absolute; left: 0; color: var(--sun);">✦</span>
+                            <strong>Secret Sessions</strong> — weekly mystery practice (Wednesdays)
                         </li>
                         <li style="padding: 0.5rem 0 0.5rem 1.5rem; position: relative; font-size: 0.95rem; color: var(--deep-soft);">
                             <span style="position: absolute; left: 0; color: var(--sun);">✦</span>
@@ -931,11 +983,17 @@
                         </li>
                         <li style="padding: 0.5rem 0 0.5rem 1.5rem; position: relative; font-size: 0.95rem; color: var(--deep-soft);">
                             <span style="position: absolute; left: 0; color: var(--sun);">✦</span>
-                            <strong>1:1 check-ins</strong> during The Weekly Ground
+                            <strong>1:1 check-ins</strong> during The Weekly Ground (Mondays)
                         </li>
                     </ul>
-                    <div class="offering-meta" style="margin-bottom: 1.25rem;">
-                        <span class="meta-tag" style="font-size: 1rem; padding: 0.4rem 1rem;">$250/month</span>
+
+                    <div class="trial-banner">
+                        <span class="trial-banner-label">New here?</span>
+                        <span class="trial-banner-text">Try a <em>free week</em> — or your <em>first month for $50</em>.</span>
+                    </div>
+
+                    <div class="offering-meta" style="margin-bottom: 1.25rem; margin-top: 1.25rem;">
+                        <span class="meta-tag" style="font-size: 1rem; padding: 0.4rem 1rem;">$250/month after trial</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
                         <a href="/membership/" class="btn btn-primary" style="background: var(--sun); color: var(--deep);">Become a Member →</a>
@@ -1181,9 +1239,9 @@
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
                             <p>There are three weekly group sessions, each with a different flavor:</p>
-                            <p><em>Journaling, Accountability & 1:1 Time</em> is a reflection session — a space to get honest about what's happening, name what you're working on, and be witnessed and held accountable by the group as you integrate changes into your actual life.</p>
-                            <p><em>Movement + Expression</em> is a somatic session — we get into the body through movement and use it as a doorway into what wants to be felt, expressed, and freed up. Less thinking, more moving.</p>
-                            <p><em>Pattern Break</em> is the deep relational practice session. We find out what each person wants to work on, then organize around the juiciest ways to practice together. It's facilitated, alive, and responsive — you get to try something different in real time with other humans, which is where the magic really happens.</p>
+                            <p><em>The Weekly Ground</em> (Mondays) is for the work itself — coworking, accountability, journaling, getting things done together. Members get 1:1 check-in time with me.</p>
+                            <p><em>Secret Sessions</em> (Wednesdays) is solo somatic practice in the company of others. Movement, nervous system work, voice, somatic meditation — a different doorway than relational practice. Less talking, more arriving in your own body.</p>
+                            <p><em>Pattern Break</em> (Fridays) is the deep relational practice session. We find out what each person wants to work on, then organize around the juiciest ways to practice together. It's facilitated, alive, and responsive — you get to try something different in real time with other humans, which is where the magic really happens.</p>
                         </div>
                     </div>
                 </div>
