@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luckiest Human Alive — Pattern Break Session</title>
+<meta name="description" content="A Pattern Break session exploring what patterns you would need to break to become the luckiest human alive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F8EFE5;
+    --warm: #FFF9F2;
+    --ink: #302620;
+    --soft-ink: #645248;
+    --clay: #B87958;
+    --clay-dark: #8D563C;
+    --gold: #C9A46A;
+    --sage: #899D78;
+    --line: rgba(141, 86, 60, 0.18);
+    --glow: rgba(201, 164, 106, 0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 18% 16%, rgba(201, 164, 106, 0.16), transparent 32rem),
+      radial-gradient(circle at 82% 10%, rgba(137, 157, 120, 0.14), transparent 28rem),
+      radial-gradient(circle at 50% 88%, rgba(184, 121, 88, 0.12), transparent 34rem),
+      var(--cream);
+    line-height: 1.72;
+  }
+
+  main {
+    width: min(920px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 5rem 0 4rem;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 249, 242, 0.78);
+    border: 1px solid var(--line);
+    border-radius: 34px;
+    box-shadow: 0 28px 90px rgba(48, 38, 32, 0.11);
+    padding: clamp(2rem, 6vw, 5rem);
+    backdrop-filter: blur(16px);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255,255,255,.38), transparent 38%, rgba(201,164,106,.08));
+  }
+
+  .content { position: relative; z-index: 1; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    color: var(--clay-dark);
+    font-size: .74rem;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .55rem 1rem;
+    background: rgba(255, 255, 255, .35);
+    margin-bottom: 2.3rem;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(3.25rem, 10vw, 7.5rem);
+    line-height: .88;
+    letter-spacing: -.04em;
+    color: var(--ink);
+    max-width: 760px;
+  }
+
+  h1 span {
+    display: block;
+    font-style: italic;
+    color: var(--clay);
+    letter-spacing: -.02em;
+  }
+
+  .subtitle {
+    margin-top: 1.4rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--clay-dark);
+  }
+
+  .question {
+    margin: 3.3rem 0 2.1rem;
+    padding: 1.45rem 1.6rem;
+    border-left: 3px solid var(--gold);
+    background: rgba(201, 164, 106, 0.11);
+    border-radius: 0 22px 22px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+    line-height: 1.22;
+    color: var(--ink);
+  }
+
+  .body {
+    max-width: 720px;
+    font-size: 1.06rem;
+    color: var(--soft-ink);
+  }
+
+  .body p + p { margin-top: 1.35rem; }
+
+  .awe {
+    display: block;
+    margin: .45rem 0 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-style: italic;
+    color: var(--clay-dark);
+  }
+
+  .interruptions {
+    margin: 2rem 0;
+    display: grid;
+    gap: .75rem;
+  }
+
+  .interruptions div {
+    display: flex;
+    gap: .75rem;
+    align-items: baseline;
+    padding: .88rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.32);
+    color: var(--ink);
+  }
+
+  .interruptions div::before {
+    content: 'from';
+    flex: 0 0 auto;
+    color: var(--clay);
+    font-size: .72rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .closing {
+    margin-top: 2.4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 1.1rem;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--soft-ink);
+    font-size: .82rem;
+  }
+
+  footer a { color: var(--clay-dark); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    main { padding: 1rem 0 2rem; width: min(100% - 1rem, 920px); }
+    .card { border-radius: 24px; padding: 2rem 1.25rem; }
+    h1 { font-size: clamp(3rem, 17vw, 5rem); }
+    .question { margin-top: 2.4rem; padding: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <article class="card">
+    <div class="content">
+      <div class="eyebrow">Pattern Break Session</div>
+      <h1>Luckiest Human <span>Alive</span></h1>
+      <p class="subtitle">A Pattern Break Session</p>
+
+      <div class="question">What patterns would you need to break to become the luckiest human alive?</div>
+
+      <div class="body">
+        <p>The kind of life where, underneath everything, you feel real awe:<span class="awe">“I can’t believe I get to live like this.”</span></p>
+
+        <p>Most people try to change their lives externally without interrupting the deeper patterns shaping how they relate, lead, love, create, and move through the world.</p>
+
+        <p>Sometimes this shows up as suffering, stuckness, or disconnection — a sense that even amidst a beautiful and successful life, something meaningful, connected, liberating, and alive beckons.</p>
+
+        <p>Pattern Break is an experiential session designed to create moments of real interruption:</p>
+
+        <div class="interruptions" aria-label="Moments of interruption">
+          <div>disconnection</div>
+          <div>performance</div>
+          <div>compulsive self-protection</div>
+          <div>emotional deadness</div>
+          <div>roles and identities that no longer feel fully alive</div>
+        </div>
+
+        <p>It’s about the quiet feeling that your life is becoming increasingly precious to you.</p>
+
+        <p class="closing">Through interactive exercises, relational experiments, live interventions, and real-time reflection, we’ll explore what becomes possible when you stop repeating yourself long enough to encounter your life differently.</p>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/">Sofia-Jeanne Caring · The Relational School</a>
+  </footer>
+</main>
+</body>
+</html>
